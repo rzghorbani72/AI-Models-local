@@ -1,0 +1,60 @@
+{
+  // === Continue Extension Configuration ===
+  // Points to local Ollama instance running on port 11434
+
+  // Model configuration
+  "continue.customModelUrl": "http://localhost:11434",
+  "continue.customModel": "deepseek-coder-v2:16b",
+
+  // Alternative models (uncomment to switch):
+  // "continue.customModel": "mistral:latest",
+  // "continue.customModel": "neural-chat:latest",
+  // "continue.customModel": "starling-lm:7b",
+  // "continue.customModel": "codellama:13b",
+  // "continue.customModel": "dolphin-mixtral:latest",
+
+  // Continue-specific settings
+  "continue.manualCommandTemplates": true,
+  "continue.showContinueForFreeTrial": false,
+
+  // IDE Formatting & Code Quality
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript.tsx]": {
+    "editor.formatOnSave": true
+  },
+  "[python]": {
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.formatOnSave": true
+  },
+
+  // Editor preferences
+  "editor.fontSize": 13,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.trimAutoWhitespace": true,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+
+  // Python settings
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.formatting.provider": "black",
+
+  // Exclude patterns
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+    "**/node_modules": true,
+    "**/.git": true,
+    "**/.next": true,
+    "**/dist": true,
+    "**/build": true
+  }
+}

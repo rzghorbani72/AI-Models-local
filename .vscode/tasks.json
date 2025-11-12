@@ -1,0 +1,101 @@
+{
+      "version": "2.0.0",
+      "tasks": [
+                {
+                  "label": "Ollama: Ping & Verify Connection",
+                  "type": "shell",
+                  "command": "${workspaceFolder}/scripts/ping-ollama.sh",
+                  "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": true,
+                    "panel": "shared"
+                  },
+                  "runOptions": {
+                    "runOn": "folderOpen"
+                  },
+                  "problemMatcher": []
+                },
+                {
+                  "label": "Ollama: List Available Models",
+                  "type": "shell",
+                  "command": "ollama",
+                  "args": ["list"],
+                  "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": true,
+                    "panel": "shared"
+                  },
+                  "problemMatcher": []
+                },
+                {
+                  "label": "Ollama: Pull deepseek-coder (Recommended)",
+                  "type": "shell",
+                  "command": "ollama",
+                  "args": ["pull", "deepseek-coder-v2:16b"],
+                  "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": true,
+                    "panel": "shared"
+                  },
+                  "isBackground": true,
+                  "problemMatcher": []
+                },
+                {
+                  "label": "Ollama: Pull mistral (Fast alternative)",
+                  "type": "shell",
+                  "command": "ollama",
+                  "args": ["pull", "mistral:latest"],
+                  "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": true,
+                    "panel": "shared"
+                  },
+                  "isBackground": true,
+                  "problemMatcher": []
+                },
+                {
+                  "label": "Ollama: Pull neural-chat (Lightweight)",
+                  "type": "shell",
+                  "command": "ollama",
+                  "args": ["pull", "neural-chat:latest"],
+                  "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": true,
+                    "panel": "shared"
+                  },
+                  "isBackground": true,
+                  "problemMatcher": []
+                },
+                {
+                  "label": "Ollama: Pull recommended list (script)",
+                  "type": "shell",
+                  "command": "${workspaceFolder}/scripts/pull-models.sh",
+                  "isBackground": true,
+                  "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": true,
+                    "panel": "shared"
+                  },
+                  "problemMatcher": []
+                },
+                {
+                  "label": "Ollama: Test with curl",
+                  "type": "shell",
+                  "command": "curl",
+                  "args": ["-s", "http://localhost:11434/api/tags"],
+                  "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": true,
+                    "panel": "shared"
+                  },
+                  "problemMatcher": []
+                }
+              ]
+            }
