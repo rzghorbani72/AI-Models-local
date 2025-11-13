@@ -5,12 +5,11 @@ set -euo pipefail
 # Edit the MODELS array to add/remove models.
 
 MODELS=(
-  "deepseek-coder-v2:16b"    # General coding (recommended)
-  "neural-chat:latest"       # Lightweight, fast
-  "mistral:latest"           # Balanced general-purpose model
-  "codellama:13b"            # CodeLlama, useful for code tasks
-  "starling-lm:7b"           # Another code-oriented model
-  "dolphin-mixtral:latest"   # Large, high-quality reasoning
+  "deepseek-coder-v2:16b"    # 16B code-focused; strong on refactors, tests, bug hunts
+  "neural-chat:latest"       # Lightweight chat; snappy brainstorming and shell help
+  "mistral:latest"           # Balanced mix of reasoning + speed for general prompts : Want more general reasoning or non-code writing
+  "codellama:13b"            # Open CodeLlama; excels at Python/scripts, reproducible outputs
+  "starling-lm:7b"           # RLHF-tuned 7B; great for cooperative, low-latency coding
 )
 
 HOST_CMD=${1:-ollama}
